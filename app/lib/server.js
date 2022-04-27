@@ -28,4 +28,10 @@ app.get("/v1/explorers/username/:mission", (req = request, res = response) => {
     res.json({ mission, usernames: usernamesInMission });
 });
 
+app.get("/v1/fizzbuzz/:number", (req = request, res = response) => {
+    const { number } = req.params;
+    const fizzbuzzResult = ExplorerController.getFizzbuzzByNumber(number);
+    res.json({ score: number, trick: fizzbuzzResult });
+});
+
 app.listen(port, () => console.log(`Fizzbuzz API in localhost:${port}`));

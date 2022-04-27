@@ -28,4 +28,17 @@ describe("Unit Test for ExplorerController Class", () => {
         expect(amountMissionNode).toBe(10);
         expect(amountMissionJava).toBe(5);
     });
+    test("Obtener Fizzbuzz dado por un numero en la funcion", () => {
+        // Aqui invocas el codigo que cas a usar en tu app
+        const fizzbuzz1 = ExplorerController.getFizzbuzzByNumber(3);
+        const fizzbuzz2 = ExplorerController.getFizzbuzzByNumber(5);
+        const fizzbuzz3 = ExplorerController.getFizzbuzzByNumber(15);
+        const fizzbuzz4 = ExplorerController.getFizzbuzzByNumber(8);
+        // Aqui validad los resultados de ese codigo
+        // Esta comparacioh que va a igualar de la izquierda con el valor de la derache (valor esperado)
+        expect(fizzbuzz1).toBe("FIZZ");
+        expect(fizzbuzz2).toBe("BUZZ");
+        expect(fizzbuzz3).toBe("FIZZBUZZ");
+        expect(fizzbuzz4).toBe(8);
+    });
 });
