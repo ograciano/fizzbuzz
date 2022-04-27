@@ -1,23 +1,23 @@
 const Reader = require("./app/lib/utils/Reader");
-const ExplorerService = require('./app/lib/services/ExplorerService');
-const FizzbuzzService = require('./app/lib/services/FizzbuzzService');
+const ExplorerService = require("./app/lib/services/ExplorerService");
+const FizzbuzzService = require("./app/lib/services/FizzbuzzService");
 
 // Part 1 Read json file ===========================
-const explorers = Reader.readJsonFile('explorers.json')
+const explorers = Reader.readJsonFile("explorers.json");
 // console.log(explorers);
 // console.log(explorers.length);
 
 // Part 2: Get the quantity of explorers names in node
 
-const explorersInNode = ExplorerService.filterByMission(explorers, 'node');
+const explorersInNode = ExplorerService.filterByMission(explorers, "node");
 // console.log(explorersInNode.length)
 
-const amountExplorers = ExplorerService.getAmountOfExplorersByMission(explorers, 'java');
-// console.log(amountExplorers);
+const amountExplorers = ExplorerService.getAmountOfExplorersByMission(explorers, "java");
+console.log(amountExplorers);
 
-// Part4: Get the explorer's usernames in Node
-const usernames = ExplorerService.getExplorersUsernamesByMission(explorers, 'java');
-// console.log(usernames);
+// Part4: Get the explorer"s usernames in Node
+const usernames = ExplorerService.getExplorersUsernamesByMission(explorers, "java");
+console.log(usernames);
 
 // DEAD CODE: Part 5,6,7, please remove this and go to Part 8!
 
@@ -28,5 +28,5 @@ const usernames = ExplorerService.getExplorersUsernamesByMission(explorers, 'jav
 
 
 const explorersFizzbuzz = explorersInNode.map((explorer) => FizzbuzzService.applyValidationInExplorer(explorer));
-// console.log(explorersFizzbuzz);
+console.log(explorersFizzbuzz);
 
