@@ -10,6 +10,6 @@ describe("Unit Test for FizzbizzService Class", () => {
         const explorersFizzbuzz = explorersNode.map((explorer) => FizzbuzzService.applyValidationInExplorer(explorer));
         // Aqui validad los resultados de ese codigo
         // Esta comparacioh que va a igualar de la izquierda con el valor de la derache (valor esperado)
-        expect(explorersFizzbuzz[2].trick).toBe('FIZz');
+        expect(explorersFizzbuzz[2].trick).toBe('FIZZ');
     });
 })
