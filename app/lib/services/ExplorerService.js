@@ -15,6 +15,11 @@ class ExplorerService {
         return explorersByMission.map((explorer) => explorer.githubUsername);
 
     }
+
+    static getExplorersByStack(explorers, stack){
+        const explorersByStack = explorers.filter((explorer) => explorer.stacks.includes(stack));
+        return explorersByStack;
+    }
 }
 
 module.exports = ExplorerService;

@@ -21,6 +21,11 @@ class ExplorerController {
     static getFizzbuzzByNumber(numero = 0) {
         return FizzbuzzService.applyValidationInNumber(numero);
     }
+
+    static getExplorersByStack(stack){
+        const explorers = Reader.readJsonFile("explorers.json");
+        return ExplorerService.getExplorersByStack(explorers, stack);
+    }
 }
 
 module.exports = ExplorerController;

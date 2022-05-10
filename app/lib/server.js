@@ -34,4 +34,10 @@ app.get("/v1/fizzbuzz/:number", (req = request, res = response) => {
     res.json({ score: number, trick: fizzbuzzResult });
 });
 
+app.get("/v1/explores/stack/:stack", (request, response) => {
+    const {stack} = request.params
+    const stacks = ExplorerController.getExplorersByStack(stack);
+    response.json({stack, explorers: stacks});
+});
+
 app.listen(port, () => console.log(`Fizzbuzz API in localhost:${port}`));

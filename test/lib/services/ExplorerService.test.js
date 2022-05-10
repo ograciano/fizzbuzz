@@ -34,4 +34,15 @@ describe("Unit Test for Reader Class", () => {
         expect(explorersNode[0]).toBe("ajolonauta1");
         expect(explorersJava[0]).toBe("ajolonauta6");
     });
+
+    test("Obtener los explorers apartir de un stack", () => {
+        // Aqui invocas el codigo que cas a usar en tu app
+        const explorers = Reader.readJsonFile("explorers.json");
+        const stackJavascript = ExplorerService.getExplorersByStack(explorers, "javascript");
+        const stackElm = ExplorerService.getExplorersByStack(explorers, "elm");
+        // Aqui validad los resultados de ese codigo
+        // Esta comparacioh que va a igualar de la izquierda con el valor de la derache (valor esperado)
+        expect(stackJavascript.length).toBe(11);
+        expect(stackElm.length).toBe(12);
+    });
 });

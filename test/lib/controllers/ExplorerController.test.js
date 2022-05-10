@@ -41,4 +41,14 @@ describe("Unit Test for ExplorerController Class", () => {
         expect(fizzbuzz3).toBe("FIZZBUZZ");
         expect(fizzbuzz4).toBe(8);
     });
+    test("Obtener Los explorers por stack", () => {
+        // Aqui invocas el codigo que cas a usar en tu app
+        const stackJavascript = ExplorerController.getExplorersByStack('javascript');
+        const stackElm = ExplorerController.getExplorersByStack('elm');
+        
+        // Aqui validad los resultados de ese codigo
+        // Esta comparacioh que va a igualar de la izquierda con el valor de la derache (valor esperado)
+        expect(stackJavascript.length).toBe(11);
+        expect(stackElm.length).toBe(12);
+    });
 });
