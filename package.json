@@ -8,7 +8,7 @@
     "linter": "node ./node_modules/eslint/bin/eslint.js .",
     "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix",
     "start": "node ./app/lib/server.js",
-    "bot": "node ./lib/bot.js"
+    "bot": "node ./app/lib/bot.js"
   },
   "author": "",
   "license": "ISC",
